@@ -16,7 +16,7 @@ update board
 -- 글수정
 update board
    set title='수정된 제목',
-	   content='스정된 내용'
+	   content='수정된 내용'
  where no=1;
 
 -- 삭제

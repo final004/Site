@@ -26,5 +26,4 @@ public class LogoutAction implements Action {
 		session.invalidate();
 		HttpUtil.redirect(response, "/mysite/user?a=loginform");
 	}
-
 }
