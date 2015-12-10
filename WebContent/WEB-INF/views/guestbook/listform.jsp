@@ -50,7 +50,7 @@
 								<td><a href="/mysite/guestbook?a=deleteform&no=<%=vo.getNo()%>">삭제</a></td>
 							</tr>
 							<tr>
-								<td colspan=4><%=vo.getMessage()%><br> 하하하하
+								<td colspan=4><%=vo.getMessage()%><br>
 								</td>
 							</tr>
 						</table> <br>
