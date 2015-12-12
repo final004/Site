@@ -8,6 +8,7 @@ public class BoardVo {
 	private String name;
 	private String content;
 	private String date;
+	private String view_cnt;
 	
 	public long getNo() {
 		return no;
@@ -45,12 +46,16 @@ public class BoardVo {
 	public void setDate(String date) {
 		this.date = date;
 	}
+	
+	public String getView_cnt() {
+		return view_cnt;
+	}
+	public void setView_cnt(String view_cnt) {
+		this.view_cnt = view_cnt;
+	}
 	@Override
 	public String toString() {
 		return "BoardVo [no=" + no + ", title=" + title + ", member_no=" + member_no + ", name=" + name + ", content="
-				+ content + ", date=" + date + "]";
+				+ content + ", date=" + date + ", view_cnt=" + view_cnt + "]";
 	}
-	
-	
-
 }

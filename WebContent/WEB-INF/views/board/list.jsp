@@ -29,31 +29,21 @@
 						<th>작성일</th>
 						<th>&nbsp;</th>
 					</tr>
-			
-				<%=list.size() %>
+					
 					<%
 						for(BoardVo vo : list){
 					%>		
 					<tr>
 						<td><%=vo.getNo() %></td>
-						<td><a href="/mysite/board?a=view"><%=vo.getTitle() %></a></td>
+						<td><a href="/mysite/board?a=view&no=<%=vo.getNo()%>"><%=vo.getTitle() %></a></td>
 						<td><%=vo.getName() %></td>
-						<td><%=vo.getMember_no() %></td>
+						<td><%=vo.getView_cnt() %></td>
 						<td><%=vo.getDate() %></td>
-						<td><a href="" class="del">삭제</a></td>
+						<td><a href="/mysite/board?a=delete&no=<%=vo.getNo() %>" class="del">삭제</a></td>
 					</tr>	
 					<%
 						}
-					%>
-				
-					<tr>
-						<td>1</td>
-						<td><a href="/mysite/board?a=view">test</a></td>
-						<td>test</td>
-						<td>1 </td>
-						<td>2015</td>
-						<td><a href="" class="del">삭제</a></td>
-					</tr>						
+					%>					
 				</table>
 				<div class="pager">
 					<ul>

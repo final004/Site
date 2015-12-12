@@ -2,11 +2,13 @@
 insert
   into board
 values ( board_no_seq.nextval, '제목입니다.', '내용입니다.', 2, 0, SYSDATE );
-
+select * from board;
 -- 글보기
 select no, title, content, member_no
   from board
  where no=1;
+
+delete board where title='test';
 
 -- 조회수 늘리기
 update board

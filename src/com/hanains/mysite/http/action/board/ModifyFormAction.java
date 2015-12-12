@@ -8,16 +8,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.hanains.http.HttpUtil;
 import com.hanains.http.action.Action;
-import com.hanains.mysite.dao.UserDao;
-import com.hanains.mysite.vo.UserVo;
 
-
-public class WriteFormAction implements Action {
+public class ModifyFormAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpUtil.forwarding(request, response, "WEB-INF/views/board/write.jsp");
+		request.setCharacterEncoding("UTF-8");
+		String no_str = request.getParameter("no");
+		Long no = Long.parseLong(no_str);
+		
+		request.setAttribute("no", no);
+		HttpUtil.forwarding(request, response, "/WEB-INF/views/board/modify.jsp");
 	}
 
 }
