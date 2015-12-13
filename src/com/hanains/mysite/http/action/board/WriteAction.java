@@ -19,8 +19,6 @@ public class WriteAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		request.setCharacterEncoding("UTF-8");
-		String title = request.getParameter("title");
-		String content = request.getParameter("content");
 		
 		HttpSession session = request.getSession(true);
 		UserVo v = (UserVo) session.getAttribute("authUser");
@@ -28,6 +26,10 @@ public class WriteAction implements Action {
 			HttpUtil.redirect(response, "/mysite/user?a=loginform&result=fail");
 			return;
 		}
+		
+		String title = request.getParameter("title");
+		String content = request.getParameter("content");
+		
 		Long no = v.getNo();
 		System.out.println(v+":"+no);
 		String str="";
